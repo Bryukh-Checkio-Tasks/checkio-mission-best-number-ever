@@ -40,7 +40,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
             }
 
             //YOUR FUNCTION NAME
-            var fname = 'i_love_python';
+            var fname = 'checkio';
 
             var checkioInput = data.in || "";
             var checkioInputStr = fname + '()';

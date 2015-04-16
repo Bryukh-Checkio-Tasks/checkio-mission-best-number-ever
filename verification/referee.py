@@ -42,7 +42,7 @@ api.add_listener(
             'python-27': cover_codes.unwrap_args,  # or None
             'python-3': cover_codes.unwrap_args
         },
-        function_name="the_best_number",
+        function_name="checkio",
         checker=lambda _, res: (isinstance(res, (int, float)), None)
         # checker=None,  # checkers.float.comparison(2)
         # add_allowed_modules=[],
