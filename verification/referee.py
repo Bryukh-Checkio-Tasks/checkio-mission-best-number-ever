@@ -34,16 +34,25 @@ from checkio.referees import checkers
 
 from tests import TESTS
 
+
+cover = """def cover(f, _):
+    ans = f()
+    if not isinstance(ans, (int, float, complex)):
+        raise TypeError("We need a number (int, float, complex)")
+    else:
+        return str(ans)"""
+
+
 api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
         cover_code={
-            'python-27': cover_codes.unwrap_args,  # or None
-            'python-3': cover_codes.unwrap_args
+            'python-27': cover,
+            'python-3': cover
         },
         function_name="checkio",
-        checker=lambda _, res: (isinstance(res, (int, float, complex)), None)
+        # checker=lambda _, res: (isinstance(res, (int, float, complex)), None)
         # checker=None,  # checkers.float.comparison(2)
         # add_allowed_modules=[],
         # add_close_builtins=[],
