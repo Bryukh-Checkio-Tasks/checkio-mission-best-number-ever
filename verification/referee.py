@@ -52,7 +52,7 @@ api.add_listener(
             'python-3': cover
         },
         function_name="checkio",
-        # checker=lambda _, res: (isinstance(res, (int, float, complex)), None)
+        checker=lambda _, res: (True, None)
         # checker=None,  # checkers.float.comparison(2)
         # add_allowed_modules=[],
         # add_close_builtins=[],
